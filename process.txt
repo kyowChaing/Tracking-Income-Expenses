@@ -1,0 +1,25 @@
+//take data from user by input form
+//select form by id and add submit Evenlistener and off  default form behaviour
+
+//if user input value then ittems will be add
+        addItems( type,desc,value); //calling addItems() to add Items that user inputed by sendin user inputed data [type,desc,value]
+        resetForm(); //calling resetForm() to reset input field by clearing input data
+
+//ceate html element block where can show user input data as a record and insert dynamically 
+    //user input data according user input
+    //using turnary operator chage coler red or green by 
+    //if type positive amount then apply income-amount style otherwisw expense-amount
+
+// console.log(newHtmlElementBlock);
+    //add newHtmlblock element into collection by using insertAdjacentHTML()
+    //here afterbein proper use to to isert starting of element in selected (innere)
+
+/using curren date and time by Date() constructor function
+    //changing time show formate default [Sun Feb 11 2024 10:37:38 GMT+0600 (Bangladesh Standard Time)] to 25 Feb, 06:45 PM
+    //by using toLocalTimeString() method
+    // console.log(dateTime.toLocaleDateString()); //it log local date formate like Feb 11, 10:59 AM
+    //   console.log(typeof dateTime , dateTime);
+    //to make exect format use split methoed to split and rearrange
+    // const datee=dateTime.split(' ')[];
+
+// Store user inputed data into local storage as joson format as key value pair and render it from local storage
