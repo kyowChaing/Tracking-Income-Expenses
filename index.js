@@ -30,7 +30,7 @@ function addItems(type,desc,value){
     </div>
   </div>
   </div>
-`
+`;
   //add newHtmlblock element into collection div by using insertAdjacentHTML()
   const collection=document.querySelector('.collection');
   collection.insertAdjacentHTML('afterbegin',newHtmlElementBlock);  //here afterbein proper use to to isert starting of element in selected (innere)
@@ -79,7 +79,33 @@ function getItemsFromLS(){
   if(items){
     items=JSON.parse(items); //converting JSONE to string object array
   }else{ items=[];}//ctreating empty array
+  return items;
 }
 
+//Show Local storage Data into html page in collections div
+showItems();
+function showItems(){
+  const collection=document.querySelector('.collection');
+  let items=getItemsFromLS();
+  for (const item of items) {
+    const newHtmlElementBlock = `
+    <div class="item">
+    <div class="item-description-time">
+      <div class="item-description">
+        <p>${item.desc}</p>
+      </div>
+      <div class="item-time">
+        <p>${item.time}</p>
+      </div>
+    </div>
+    <div class="item-amount ${item.type==='+'? "income-amount":"expense-amount"}">
+      <p> ${item.type}$ ${item.value}</p>
+    </div>
+  </div>
+  </div>
+  `;
+  collection.insertAdjacentHTML('afterbegin',newHtmlElementBlock); 
+  }
+}
 
 
