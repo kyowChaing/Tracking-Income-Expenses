@@ -23,3 +23,23 @@
     // const datee=dateTime.split(' ')[];
 
 // Store user inputed data into local storage as joson format as key value pair and render it from local storage
+     //first get items key from localstorage and check if any value on items key 
+     creating function  to get JSON data from local Storage
+     //converting JSONE to string object array
+    //creating empty array
+    //adding data into items array
+    //store into local storage by converting JSON form
+
+//Show Local storage Data into html page in collections div by creating showItem() methoed
+//show total income and expenses
+    //get local storage date
+    //all type:+ need to add for total income, and type:- add for total expense ,
+    //then subtraction from total income to total expenses will be  total balance
+
+    //totla income
+        showTotalIncome();
+    //totla expenses
+        showTotalExpensess();
+    //adding totalIncome into HTML page  in p tag and income_amount clases
+    //adding totalExpenses into p tag under expense_amount classes
+    

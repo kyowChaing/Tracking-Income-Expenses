@@ -9,6 +9,8 @@ document.querySelector('#ewallet-form').addEventListener('submit',function(e){
         addItems( type,desc,value);                          //calling addItems() to add Items that user inputed by sendin user inputed data [type,desc,value]
         resetForm();                                         //calling resetForm() to reset input field by clearing input data
     }
+    showTotalIncome();
+    showTotalExpensess();
 });
 
 //adding user input data into new html element
@@ -78,7 +80,7 @@ function getItemsFromLS(){
   let items=localStorage.getItem('items');
   if(items){
     items=JSON.parse(items); //converting JSONE to string object array
-  }else{ items=[];}//ctreating empty array
+  }else{ items=[];}//creating empty array
   return items;
 }
 
@@ -109,3 +111,36 @@ function showItems(){
 }
 
 
+//show total income and expenses
+
+showTotalIncome();
+function showTotalIncome(){
+  //get local storage date
+  let items =getItemsFromLS();
+  //all type:+ need to add for total income, and type:- add for total expense ,
+  //then subtraction from total income to total expenses will be  total balance
+
+  //totla income
+  let totalIncome=0;
+  for (const item of items) {
+    if(item.type==='+'){
+      totalIncome+=parseInt(item.value);
+    }
+  }
+  console.log(totalIncome);
+//adding totalIncome into HTML page  in p tag and income_amount clases
+  document.querySelector('.income__amount p').innerText=`$${totalIncome}`;
+}
+showTotalExpensess();
+function showTotalExpensess(){
+    const items= getItemsFromLS();
+    //totla expenses
+    let totalExpense=0;
+    for (const item of items) {
+      if(item.type==='-'){
+        totalExpense+=parseInt(item.value);
+      }
+    }
+    //adding totalExpenses into p tag under expense_amount classes
+  document.querySelector(".expense__amount p").innerText=`$${totalExpense}`;
+}
