@@ -11,6 +11,7 @@ document.querySelector('#ewallet-form').addEventListener('submit',function(e){
     }
     showTotalIncome();
     showTotalExpensess();
+    showTotlaBalance();
 });
 
 //adding user input data into new html element
@@ -127,10 +128,11 @@ function showTotalIncome(){
       totalIncome+=parseInt(item.value);
     }
   }
-  console.log(totalIncome);
 //adding totalIncome into HTML page  in p tag and income_amount clases
   document.querySelector('.income__amount p').innerText=`$${totalIncome}`;
 }
+
+//show totalExpensess
 showTotalExpensess();
 function showTotalExpensess(){
     const items= getItemsFromLS();
@@ -143,4 +145,26 @@ function showTotalExpensess(){
     }
     //adding totalExpenses into p tag under expense_amount classes
   document.querySelector(".expense__amount p").innerText=`$${totalExpense}`;
+}
+
+//show totalBalace
+showTotlaBalance();
+function showTotlaBalance(){
+  const items = getItemsFromLS();
+  let balance=0;
+  for (const item of items) {
+    if(item.type==='+'){
+      balance+=parseInt(item.value);
+    }else{
+      balance-=parseInt(item.value);
+    }
+  }
+
+  document.querySelector('header').className=balance>=0?'green':'red';
+  // if (balance>=0) {
+  //   document.querySelector('header').className='green';
+  // } else {
+  //   document.querySelector('header').className='red';
+  // }
+  document.querySelector(`.balance__amount p`).innerText=`$${balance}`;
 }

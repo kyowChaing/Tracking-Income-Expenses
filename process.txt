@@ -42,4 +42,7 @@
         showTotalExpensess();
     //adding totalIncome into HTML page  in p tag and income_amount clases
     //adding totalExpenses into p tag under expense_amount classes
+
+    //show totalBalace
+        showTotlaBalance();
     

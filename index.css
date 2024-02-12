@@ -5,8 +5,7 @@
 *::after {
   margin: 0px;
   padding: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -23,6 +22,7 @@ body {
   font-family: 'Noto Serif', serif;
   font-weight: 400;
   line-height: 1.6;
+  background: #B06F0E;
 }
 
 header {
@@ -32,23 +32,14 @@ header {
 }
 
 header.green {
-  background: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
-  background: -webkit-linear-gradient(left top, #7ed56f, #28b485);
-  background: -o-linear-gradient(left top, #7ed56f, #28b485);
-  background: linear-gradient(to right bottom, #7ed56f, #28b485);
+  background: linear-gradient(to right bottom, #066e3e, #065c31);
 }
 
 header.red {
-  background: -webkit-gradient(linear, left top, right bottom, from(#d56f6f), to(#b42828f5));
-  background: -webkit-linear-gradient(left top, #d56f6f, #b42828f5);
-  background: -o-linear-gradient(left top, #d56f6f, #b42828f5);
-  background: linear-gradient(to right bottom, #d56f6f, #b42828f5);
+  background: linear-gradient(to right bottom, #80272c, #660f0ff5);
 }
 
 header .ewalletLogo {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -70,19 +61,9 @@ header .ewalletLogo h1 {
   display: inline;
   color: white;
   font-size: 3.2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   letter-spacing: 2px;
   font-family: 'Dancing Script', cursive;
 }
@@ -98,7 +79,8 @@ header .ewalletLogo h1 {
 }
 
 .balance__heading {
-  font-size: 1.8rem;
+  font-size: 3rem;
+  font-weight:700;
 }
 
 .balance__amount {
@@ -108,24 +90,14 @@ header .ewalletLogo h1 {
 }
 
 .income-expense {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 350px) {
   .income-expense {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin-bottom: 1rem;
   }
 }
@@ -134,8 +106,7 @@ header .ewalletLogo h1 {
 .income-expense .expense {
   margin: 1rem;
   background: white;
-  -webkit-box-shadow: inset -5px -5px 30px #ebebeb, inset 5px 5px 30px #ffffff;
-          box-shadow: inset -5px -5px 30px #ebebeb, inset 5px 5px 30px #ffffff;
+  box-shadow: inset -5px -5px 30px #ebebeb, inset 5px 5px 30px #ffffff;
   height: 12rem;
   width: 23rem;
   text-align: center;
@@ -145,19 +116,9 @@ header .ewalletLogo h1 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 350px) {
@@ -189,22 +150,13 @@ header .ewalletLogo h1 {
 .add {
   padding: 14px;
   border-bottom: 1px solid #e7e7e7;
-  background-color: #f7f7f7;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  background-color: #054a2a;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .add__container {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 600px;
 }
@@ -219,8 +171,6 @@ header .ewalletLogo h1 {
   background-color: #fff;
   margin-right: 10px;
   font-weight: 300;
-  -webkit-transition: border 0.3s;
-  -o-transition: border 0.3s;
   transition: border 0.3s;
   padding-left: 0.7rem;
 }
@@ -235,8 +185,6 @@ header .ewalletLogo h1 {
   padding: 12px 15px;
   margin-right: 10px;
   border-radius: 5px;
-  -webkit-transition: border 0.3s;
-  -o-transition: border 0.3s;
   transition: border 0.3s;
 }
 
@@ -271,24 +219,12 @@ header .ewalletLogo h1 {
   vertical-align: middle;
   line-height: 1.1;
   margin-left: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .add__btn:active {
-  -webkit-transform: translateY(2px);
-      -ms-transform: translateY(2px);
-       -o-transform: translateY(2px);
           transform: translateY(2px);
 }
 
@@ -308,24 +244,15 @@ header .ewalletLogo h1 {
   max-width: 1000px;
   margin: 2vw auto;
   border: 1px solid #fff7f7;
-  -webkit-box-shadow: 0px 2px 10px #b4b4b4;
-          box-shadow: 0px 2px 10px #b4b4b4;
+  box-shadow: 0px 2px 10px #b4b4b4;
   border-radius: 13px;
-  background: -webkit-linear-gradient(305deg, #ffffff, #f6f1f1);
-  background: -o-linear-gradient(305deg, #ffffff, #f6f1f1);
-  background: linear-gradient(145deg, #ffffff, #f6f1f1);
+  background: linear-gradient(145deg, #808b69, #85ce85);
 }
 
 .item {
   padding: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .item:not(:last-child) {
@@ -339,32 +266,29 @@ header .ewalletLogo h1 {
 .item .item-description-time .item-description {
   font-size: 2rem;
   padding-bottom: 0.5rem;
-  color: #393e46;
+  color: #fff;
   font-weight: bold;
 }
 
 .item .item-description-time .item-time {
   font-size: 1.5rem;
-  color: gray;
+  color: #fff7f7;
 }
 
 .item .item-amount {
   font-size: 2.2rem;
   letter-spacing: 1px;
   padding: 1rem 2rem 1rem 1rem;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
-          align-self: center;
+  align-self: center;
   font-weight: bolder;
 }
 
 .item .item-amount.income-amount {
-  color: #10be67;
+  color: #06773f;
 }
 
 .item .item-amount.expense-amount {
-  color: #c70039;
+  color: #b40839;
 }
 
 .loader {
@@ -377,55 +301,10 @@ header .ewalletLogo h1 {
   height: 5.5rem;
   width: 5.5rem;
   fill: #10be67;
-  -webkit-transform-origin: 44% 50%;
-      -ms-transform-origin: 44% 50%;
-       -o-transform-origin: 44% 50%;
-          transform-origin: 44% 50%;
-  -webkit-animation: rotate 1.5s infinite linear;
-       -o-animation: rotate 1.5s infinite linear;
-          animation: rotate 1.5s infinite linear;
+  transform-origin: 44% 50%;
+  animation: rotate 1.5s infinite linear;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@-o-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-    -o-transform: rotate(0);
-       transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-       transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-    -o-transform: rotate(0);
-       transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-       transform: rotate(360deg);
-  }
+  transform: translate(-50%, -50%);
 }
