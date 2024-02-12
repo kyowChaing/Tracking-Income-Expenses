@@ -31,9 +31,11 @@ function addItems(type,desc,value){
   </div>
   </div>
 `
-    //add newHtmlblock element into collection div by using insertAdjacentHTML()
-    const collection=document.querySelector('.collection');
-    collection.insertAdjacentHTML('afterbegin',newHtmlElementBlock);  //here afterbein proper use to to isert starting of element in selected (innere)
+  //add newHtmlblock element into collection div by using insertAdjacentHTML()
+  const collection=document.querySelector('.collection');
+  collection.insertAdjacentHTML('afterbegin',newHtmlElementBlock);  //here afterbein proper use to to isert starting of element in selected (innere)
+  //calling addItemsToLS() to store user inputed desc, time type data into Local Storage 
+  addItemsToLS(desc,time,type,value);
 }
 
 //using curren date and time by Date() constructor function
@@ -58,6 +60,26 @@ function resetForm(){
 }
 
 
-// Store user inputed data into local storage as joson format as key value pair and render it from local storage
+// Store user inputed data into local storage as joson format as key value pair and rendar it from local storage
+//store data when user submited form into items key in localstorage
+
+function addItemsToLS(desc,time,type,value){
+    //first get items key from localstorage and check if any value on items key 
+    
+    let items=getItemsFromLS();
+    items.push({desc,time,type,value});//adding data into items array
+
+    //store into local storage by converting JSON form
+    localStorage.setItem('items',JSON.stringify(items));
+}
+
+// creating function  to get JSON data from local Storage
+function getItemsFromLS(){
+  let items=localStorage.getItem('items');
+  if(items){
+    items=JSON.parse(items); //converting JSONE to string object array
+  }else{ items=[];}//ctreating empty array
+}
+
 
 
